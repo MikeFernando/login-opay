@@ -1,0 +1,540 @@
+:root {
+  --primary: #f5831f;
+  --secundary: #f9f9f9;
+  --black: #333132;
+  --white: #ffffff;
+  --gray-1: #d9d9d9;
+  --grey-2: #9b9b9b;
+  --grey-divisoria: #ced4da;
+
+  --check: #2cac17;
+  --not-checked: #9b9b9b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+input {
+  font-family: "DM Sans", sans-serif;
+  outline: 0;
+}
+
+body {
+  background-color: var(--white);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    background-color: var(--secundary);
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .header {
+    background-color: var(--black);
+    padding: 44px 0;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  .header a img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header a {
+    display: inline-block;
+    color: var(--primary);
+    margin-right: auto;
+  }
+
+  .header h1 {
+    color: var(--white);
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: DM Sans;
+    font-weight: 700;
+    line-height: normal;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .box-logo {
+    max-width: 228px;
+    padding: 10px 51px;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    margin: -39px auto 44px auto;
+    grid-area: 2;
+  }
+
+  .box-logo > img {
+    max-width: 126px;
+  }
+
+  .content {
+    padding: 0 20px 154px 20px;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    gap: 10px;
+    border: 1px solid var(--grey-divisoria);
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+
+  .flex > img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .content .label {
+    display: block;
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: bold;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .content input {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+
+  .btn {
+    display: block;
+    background-color: var(--primary);
+    padding: 14px 47px;
+    color: var(--white);
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    margin: 30px 50px 16px 50px;
+  }
+
+  .btn-forgot-password {
+    color: var(--black);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .btn-signup {
+    color: var(--primary);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    display: block;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    background-color: var(--secundary);
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .header {
+    background-color: var(--black);
+    padding: 44px 0;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  .header a img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header a {
+    display: inline-block;
+    color: var(--primary);
+    margin-right: auto;
+  }
+
+  .header h1 {
+    color: var(--white);
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: DM Sans;
+    font-weight: 700;
+    line-height: normal;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .box-logo {
+    max-width: 228px;
+    padding: 10px 51px;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    margin: -39px auto 44px auto;
+    grid-area: 2;
+  }
+
+  .box-logo > img {
+    max-width: 126px;
+  }
+
+  .content {
+    padding: 0 20px 154px 20px;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    gap: 10px;
+    border: 1px solid var(--grey-divisoria);
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+
+  .flex > img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .content .label {
+    display: block;
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: bold;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .content input {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+
+  .btn {
+    display: block;
+    background-color: var(--primary);
+    padding: 14px 47px;
+    color: var(--white);
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    margin: 30px 50px 16px 50px;
+  }
+
+  .btn-forgot-password {
+    color: var(--black);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .btn-signup {
+    color: var(--primary);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    display: block;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-color: var(--secundary);
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .header {
+    background-color: var(--black);
+    padding: 44px 0;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  .header a img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header a {
+    display: inline-block;
+    color: var(--primary);
+    margin-right: auto;
+  }
+
+  .header h1 {
+    color: var(--white);
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: DM Sans;
+    font-weight: 700;
+    line-height: normal;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .box-logo {
+    max-width: 228px;
+    padding: 10px 51px;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    margin: -39px auto 44px auto;
+    grid-area: 2;
+  }
+
+  .box-logo > img {
+    max-width: 126px;
+  }
+
+  .content {
+    padding: 0 20px 154px 20px;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    gap: 10px;
+    border: 1px solid var(--grey-divisoria);
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+
+  .flex > img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .content .label {
+    display: block;
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: bold;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .content input {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+
+  .btn {
+    display: block;
+    background-color: var(--primary);
+    padding: 14px 47px;
+    color: var(--white);
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    margin: 30px 50px 16px 50px;
+  }
+
+  .btn-forgot-password {
+    color: var(--black);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .btn-signup {
+    color: var(--primary);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    display: block;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 415px) {
+  .container {
+    background-color: var(--secundary);
+    max-width: 414px;
+    margin: 0 auto;
+  }
+
+  .header {
+    background-color: var(--black);
+    padding: 44px 0;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    display: grid;
+  }
+
+  .header a {
+    display: inline-block;
+    color: var(--primary);
+  }
+
+  .header h1 {
+    color: var(--white);
+    font-size: 1rem;
+    text-align: center;
+    font-family: DM Sans;
+    font-weight: 700;
+    line-height: normal;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .box-logo > img {
+    max-width: 126px;
+  }
+
+  .box-logo {
+    max-width: 228px;
+    padding: 10px 51px;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    margin: -39px auto 44px auto;
+  }
+
+  .content {
+    max-width: 415px;
+    padding: 0 20px 154px 20px;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    gap: 10px;
+    border: 1px solid var(--grey-divisoria);
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+
+  .flex > img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .content .label {
+    display: block;
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: bold;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .content input {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+
+  .btn {
+    display: block;
+    background-color: var(--primary);
+    padding: 14px 47px;
+    color: var(--white);
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    margin: 30px 50px 16px 50px;
+  }
+
+  .btn-forgot-password {
+    color: var(--black);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .btn-signup {
+    color: var(--primary);
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    display: block;
+    margin-top: 16px;
+  }
+}
